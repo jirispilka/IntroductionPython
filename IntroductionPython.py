@@ -16,7 +16,8 @@
 # Basics
 # ======
 
-# In[1]:
+# In[40]:
+
 
 """
 Exercise 1. Introduction to python
@@ -28,79 +29,90 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# In[2]:
+# In[41]:
+
 
 #  ------ bool
 bb = True
-print bb
+print(bb)
 
 
-# In[3]:
+# In[42]:
+
 
 a = 3
 b = 7
-print 'Results is = ', a
+print('Results is = ', a)
 
 
-# In[4]:
+# In[43]:
+
 
 x = 10
 y = 10.
 
 
-# In[5]:
-
-print x, y
-print type(x), type(y)
+# In[44]:
 
 
-# In[6]:
+print(x, y)
+print(type(x), type(y))
+
+
+# In[45]:
+
 
 d = 7E4
-print d
+print(d)
 
 
-# In[7]:
+# In[46]:
+
 
 # ------- complex numbers
 
 d2 = 3 + 2j
-print d2, type(d2)
+print(d2, type(d2))
 
 
 # Tuples
 # -------
 
-# In[8]:
+# In[47]:
+
 
 #  ------ tuples
 person = ('Arnost', 'Cech', 20)
 
-print person
-print type(person)
+print(person)
+print(type(person))
 
 
-# In[9]:
-
-print person[0]
+# In[48]:
 
 
-# In[10]:
+print(person[0])
+
+
+# In[49]:
+
 
 # assigment is not supported for tuple
 # person[0] = 'petr jan'
 
 
-# In[11]:
+# In[50]:
 
-print 'Size of person: ', sys.getsizeof(person)
+
+print()'Size of person: ', sys.getsizeof(person))
 
 
 # Dictionaries
 # --------------
 # 
 
-# In[12]:
+# In[ ]:
+
 
 d = dict()
 d['karel'] = 50
@@ -109,25 +121,28 @@ print d
 
 # alternatively
 dd = {'key1': 5, 'key2': 3}
-print dd
+print(dd)
 
 
 # Lists
 # ------
 
-# In[13]:
+# In[ ]:
+
 
 l = list([10, 20, 50, 100])
 l.append(50)
 l.pop()
 
 
-# In[14]:
-
-print 'Count {0}'.format(len(l))
+# In[ ]:
 
 
-# In[15]:
+print('Count {0}'.format(len(l)))
+
+
+# In[ ]:
+
 
 # list slicing, striding
 # this is list not an array
@@ -144,58 +159,69 @@ nums
 nums[7:0:-2]
 
 
-# In[16]:
+# In[ ]:
+
 
 # power operations with power operator
 a
 
 
-# In[17]:
+# In[ ]:
+
 
 b
 
 
-# In[18]:
+# In[ ]:
+
 
 b**a   
 
 
-# In[19]:
+# In[ ]:
+
 
 nums
 
 
-# In[20]:
+# In[ ]:
+
 
 pow(b, a)
 
 
-# In[21]:
+# In[ ]:
+
 
 sum(nums)
 
 
-# In[22]:
+# In[ ]:
+
 
 max(nums)
 
 
-# In[23]:
+# In[ ]:
+
 
 min(nums)
 
 
-# In[24]:
+# In[ ]:
+
 
 range(5)
 
 
-# In[25]:
+# In[ ]:
+
 
 range(4, 12)
 
 
-# In[26]:
+# In[ ]:
+
 
 # simple functions: params, defaults, return values, scoping
 def f(x):
@@ -203,22 +229,26 @@ def f(x):
     return 3*x**2 + 8
 
 
-# In[27]:
+# In[ ]:
+
 
 help(f)
 
 
-# In[28]:
+# In[ ]:
+
 
 f(1.5)
 
 
-# In[29]:
+# In[ ]:
+
 
 f(3.7)
 
 
-# In[30]:
+# In[ ]:
+
 
 def f_o(x, offset=8):
     ''' a simple polynomial function with a configurable offset
@@ -227,50 +257,58 @@ def f_o(x, offset=8):
     return 3*x**2 + offset
 
 
-# In[31]:
+# In[ ]:
+
 
 f_o(1.5)
 
 
-# In[32]:
+# In[ ]:
+
 
 f_o(1.5, offset=10)
 
 
-# In[33]:
+# In[ ]:
+
 
 f_o(1.5, 10)
 
 
-# In[34]:
+# In[ ]:
+
 
 pfunkce = f_o
 
 
-# In[35]:
-
-print pfunkce(20)
+# In[ ]:
 
 
-# In[36]:
+print(pfunkce(20))
+
+
+# In[ ]:
+
 
 # PEP 731 - use of lambda expressions is not recommended
 # g = lambda x: 7*x**3 + 2
 # print g(2)
 
 def g(x): return 7*x**3 + 2
-print g(2)
+print(g(2))
 
 
-# In[37]:
+# In[ ]:
+
 
 with open('bostonarea.dat') as fh:
     for line in fh:
         parts = line.split()  # will remove leading and trailing whitespace
-        print "found parts:", parts
+        print("found parts:", parts)
 
 
-# In[49]:
+# In[ ]:
+
 
 # ----- matplotlib a numpy
 
@@ -279,7 +317,8 @@ t1 = np.arange(0.0, 2.0, 0.1)
 t2 = np.arange(0.0, 2.0, 0.01)
 
 
-# In[50]:
+# In[ ]:
+
 
 # note that plot returns a list of lines.  The "l1, = plot" usage
 # extracts the first element of the list into l1 using tuple
@@ -295,34 +334,40 @@ plt.title('Damped oscillation')
 plt.show()
 
 
-# In[48]:
+# In[ ]:
+
 
 x = np.arange(-2*np.pi, 2*np.pi, 0.01)
 type(x)
 
 
-# In[41]:
+# In[ ]:
+
 
 x.shape
 
 
-# In[42]:
+# In[ ]:
+
 
 x.size
 
 
-# In[43]:
+# In[ ]:
+
 
 x.dtype
 
 
-# In[44]:
+# In[ ]:
+
 
 nums = np.arange(3, 12, 2)
 nums.dtype
 
 
-# In[46]:
+# In[ ]:
+
 
 # random noise
 An = 0.1
